@@ -10,6 +10,7 @@ export default defineConfig(({ command }) => {
   const devLibPath = path.resolve(__dirname, '../lib');
   const prodLibPath = path.resolve(__dirname, '../index.es');
   return {
+    base: '/vue-datepicker-next/',
     plugins: [vue(), vueJsx({ mergeProps: false }), svgLoader(), mdPlugin],
     resolve: {
       alias: {
