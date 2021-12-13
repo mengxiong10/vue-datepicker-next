@@ -1,0 +1,193 @@
+$border-color: #ebedf0;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebar {
+  border-right: 1px solid #ebedf0;
+  width: 280px;
+  flex: 0 0 280px;
+  overflow: auto;
+  padding-top: 10px;
+  a {
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 15px;
+    overflow: hidden;
+    color: #314659;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-left: 1px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      color: mix(#fff, #1284e7, 0.8);
+    }
+    &.active {
+      color: #1284e7;
+    }
+  }
+}
+
+.main {
+  flex: 1;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  header {
+    flex: 0 0 30px;
+    text-align: right;
+  }
+  p {
+    margin: 10px 0;
+  }
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+.highlight-code {
+  margin: 0;
+  background: #fff;
+  &::after,
+  &::before {
+    width: 0;
+  }
+  // 添加优先级, 覆盖 引入的样式
+  code {
+    display: block;
+    background: #fff;
+    color: #314659;
+    line-height: 2;
+    border: 0;
+    box-shadow: none;
+    padding: 16px 32px;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  color: #314659;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  &.active {
+    border-color: #1284e7;
+  }
+}
+
+.card-demo {
+  padding: 30px 24px;
+  color: #213649;
+  border-top: 1px solid $border-color;
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    > section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.card-title {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 14px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 0 10px;
+  background: #fff;
+}
+
+.card-description {
+  padding: 12px 24px;
+}
+
+.markdown-body {
+  font-size: 15px;
+  line-height: 1.7;
+  p,
+  ul,
+  ol {
+    margin: 10px 0;
+  }
+  ul,
+  ol {
+    padding-left: 30px;
+  }
+  code {
+    margin: 0 1px;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27, 31, 35, 0.05);
+    border-radius: 3px;
+  }
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $border-color;
+  height: 36px;
+  color: #9da6b1;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  font-size: 16px;
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
+  }
+}
+
+.card-code {
+  border-top: 1px solid $border-color;
+}

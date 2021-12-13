@@ -6,7 +6,7 @@ _site
 
 node_modules
 
-index.*
+/index.*
 !index.html
 
 dist
