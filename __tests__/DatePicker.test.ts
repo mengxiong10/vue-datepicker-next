@@ -104,7 +104,7 @@ describe('DatePicker', () => {
     expect(wrapper.find('.mx-datepicker-popup').exists()).toBe(false);
   });
 
-  it('prop: input props', () => {
+  it('prop: input props', async () => {
     wrapper = shallowMount(DatePicker, {
       props: {
         value: new Date(2019, 4, 10),
@@ -114,17 +114,17 @@ describe('DatePicker', () => {
       },
     });
     expect(wrapper.element).toMatchSnapshot();
-    wrapper.setProps({
+    await wrapper.setProps({
       clearable: false,
       editable: false,
       placeholder: 'test placeholder',
       inputClass: 'test',
       inputAttr: {
-        type: 'number',
         name: 'test',
         id: 'test',
       },
     });
+    expect(wrapper.element).toMatchSnapshot();
   });
 
   it('prop: format', () => {

@@ -9,6 +9,15 @@ export default defineComponent({
   },
   data() {
     return {
+      inputProps: {
+        clearable: false,
+        editable: false,
+        placeholder: 'test placeholder',
+        inputAttr: {
+          name: 'test',
+          id: 'test',
+        },
+      },
       shortcuts: [
         {
           text: 'range',
@@ -49,10 +58,11 @@ export default defineComponent({
     <button @click="append = !append">ass</button>
     <DatePicker
       v-model:value="value"
+      v-bind="inputProps"
       :clearable="false"
-      multiple
       :append-to-body="append"
-      type="date"
+      type="datetime"
+      :time-picker-options="{ start: '00:00', end: '09:00', step: '00:30' }"
       :disabled-date="(date) => date < new Date(2021, 10, 9)"
       :open="true"
     ></DatePicker>
@@ -71,8 +81,8 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  /* color: #2c3e50; */
   margin-top: 60px;
+  margin-left: 60px;
 }
 </style>

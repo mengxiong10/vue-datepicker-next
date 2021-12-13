@@ -143,3 +143,33 @@ exports[`DatePicker prop: input props 1`] = `
   <!--teleport end-->
 </div>
 `;
+
+exports[`DatePicker prop: input props 2`] = `
+<div
+  class="mx-datepicker"
+>
+  <div
+    class="mx-input-wrapper"
+  >
+    <input
+      autocomplete="off"
+      class="test"
+      id="test"
+      name="test"
+      placeholder="test placeholder"
+      readonly=""
+      type="text"
+    />
+    <!---->
+    <i
+      class="mx-icon-calendar"
+    >
+      
+      <!---->
+      
+    </i>
+  </div>
+  <!--teleport start-->
+  <!--teleport end-->
+</div>
+`;
