@@ -13,7 +13,6 @@ export interface FixedListProps {
 }
 
 // TODO: 可否简化为 单列 Column
-// TODO: 样式
 export function FixedList(props: FixedListProps) {
   const prefixClass = usePrefixClass();
 

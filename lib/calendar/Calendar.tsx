@@ -141,7 +141,6 @@ function Calendar(originalProps: CalendarProps) {
     return classes.concat(props.getClasses(cellDate, innerValue.value, classes.join(' ')));
   };
 
-  // TODO: not-current-month 和 active 冲突处理
   const getDateClasses = (cellDate: Date) => {
     const notCurrentMonth = cellDate.getMonth() !== innerCalendar.value.getMonth();
     const classes = [];
