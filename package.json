@@ -10,7 +10,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "vite --host 0.0.0.0",
-    "build": "npm run clean && npm run build:lib-es & npm run build:lib-umd & npm run type & npm run css",
+    "build": "npm run lint && npm run test && npm run clean && npm run build:lib-es & npm run build:lib-umd & npm run type & npm run css",
     "build:lib-es": "LIB_FORMAT=es vite build",
     "build:lib-umd": "LIB_FORMAT=umd vite build",
     "type": "dts-bundle-generator -o ./index.d.ts lib/index.ts",
@@ -82,6 +82,7 @@
     "autoprefixer": "^10.4.0",
     "babel-jest": "^27.4.2",
     "conventional-changelog-cli": "^2.1.1",
+    "coveralls": "^3.1.1",
     "dts-bundle-generator": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
