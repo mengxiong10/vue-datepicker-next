@@ -12,7 +12,7 @@ import { locale } from './locale';
 const api = {
   locale,
   install: (app: App) => {
-    app.component('date-picker', DatePicker);
+    app.component('DatePicker', DatePicker);
   },
 };
 
