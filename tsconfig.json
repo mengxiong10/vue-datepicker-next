@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "vue-datepicker-next": ["./lib/index.ts"]
+    }
+  },
+  "include": [
+    "lib/**/*ts",
+    "lib/**/*tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "docs/**/*.ts",
+    "docs/**/*.tsx",
+    "docs/**/*.vue",
+    "__tests__/**/*.ts",
+    "typings/*.d.ts"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": false,
+    "declaration": true,
+    "esModuleInterop": true,
+    "declarationDir": ".",
+    "noImplicitAny": true,
+    "rootDir": "./lib",
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "vue-datepicker-next": ["./lib/index.ts"]
+    }
+  },
+  "include": ["./lib/locale/*ts"],
+  "exclude": ["node_modules"]
+}

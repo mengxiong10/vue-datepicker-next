@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker prop: appendToBody = false 1`] = `
+<body>
+  <div
+    data-v-app=""
+  />
+  <div
+    data-v-app=""
+  />
+  <div
+    data-v-app=""
+  >
+    <div
+      class="mx-datepicker"
+    >
+      <div
+        class="mx-input-wrapper"
+      >
+        <input
+          autocomplete="off"
+          class="mx-input"
+          name="date"
+          type="text"
+        />
+        <!---->
+        <i
+          class="mx-icon-calendar"
+        >
+          
+          <!---->
+          
+        </i>
+      </div>
+      <!--teleport start-->
+      <transition-stub>
+        <div
+          class="mx-datepicker-main mx-datepicker-popup undefined"
+          style="position: absolute;"
+        >
+          
+          <!---->
+          <div
+            class="mx-datepicker-content"
+          >
+            <!---->
+            
+            
+            <!---->
+          </div>
+          
+        </div>
+      </transition-stub>
+      <!--teleport end-->
+    </div>
+  </div>
+  
+</body>
+`;
+
+exports[`DatePicker prop: appendToBody = true 1`] = `
+<body>
+  <div
+    data-v-app=""
+  />
+  <div
+    data-v-app=""
+  >
+    <div
+      class="mx-datepicker"
+    >
+      <div
+        class="mx-input-wrapper"
+      >
+        <input
+          autocomplete="off"
+          class="mx-input"
+          name="date"
+          type="text"
+        />
+        <!---->
+        <i
+          class="mx-icon-calendar"
+        >
+          
+          <!---->
+          
+        </i>
+      </div>
+      <!--teleport start-->
+      <!--teleport end-->
+    </div>
+  </div>
+  <transition-stub>
+    <div
+      class="mx-datepicker-main mx-datepicker-popup undefined"
+      style="position: absolute;"
+    >
+      
+      <!---->
+      <div
+        class="mx-datepicker-content"
+      >
+        <!---->
+        
+        
+        <!---->
+      </div>
+      
+    </div>
+  </transition-stub>
+  
+</body>
+`;
+
+exports[`DatePicker prop: input props 1`] = `
+<div
+  class="mx-datepicker"
+>
+  <div
+    class="mx-input-wrapper"
+  >
+    <input
+      autocomplete="off"
+      class="mx-input"
+      name="date"
+      type="text"
+    />
+    <i
+      class="mx-icon-clear"
+    >
+      <!---->
+    </i>
+    <i
+      class="mx-icon-calendar"
+    >
+      
+      <!---->
+      
+    </i>
+  </div>
+  <!--teleport start-->
+  <!--teleport end-->
+</div>
+`;

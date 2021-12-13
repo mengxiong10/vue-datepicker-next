@@ -1,0 +1,16 @@
+.vscode
+.cache
+.DS_Store
+
+_site
+
+node_modules
+
+index.*
+!index.html
+
+dist
+
+/scss
+
+/temp
