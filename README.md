@@ -4,12 +4,6 @@
 
 > A Datepicker Component For Vue3
 
-<a href="https://travis-ci.org/mengxiong10/vue-datepicker-next">
-  <img src="https://travis-ci.org/mengxiong10/vue-datepicker-next.svg?branch=main" alt="build:passed">
-</a>
-<a href="https://coveralls.io/github/mengxiong10/vue-datepicker-next">
-  <img src="https://coveralls.io/repos/github/mengxiong10/vue-datepicker-next/badge.svg?branch=main&service=github" alt="Badge">
-</a>
 <a href="https://www.npmjs.com/package/vue-datepicker-next">
   <img src="https://img.shields.io/npm/v/vue-datepicker-next.svg" alt="npm">
 </a>

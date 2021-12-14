@@ -20,4 +20,3 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
-      - run: npm run cov
