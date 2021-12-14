@@ -26,42 +26,43 @@ exports[`TimeRange render: correct classes of the columns 1`] = `
             
             <ul
               class="mx-time-list"
+              data-index="0"
               data-type="hour"
             >
               
               <li
                 class="mx-time-item"
-                data-value="1570120200000"
+                data-index="0"
               >
                 12
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570127400000"
+                data-index="1"
               >
                 02
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570134600000"
+                data-index="2"
               >
                 04
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570141800000"
+                data-index="3"
               >
                 06
               </li>
               <li
                 class="mx-time-item active"
-                data-value="1570149000000"
+                data-index="4"
               >
                 08
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570156200000"
+                data-index="5"
               >
                 10
               </li>
@@ -88,18 +89,19 @@ exports[`TimeRange render: correct classes of the columns 1`] = `
             
             <ul
               class="mx-time-list"
+              data-index="1"
               data-type="minute"
             >
               
               <li
                 class="mx-time-item"
-                data-value="1570147200000"
+                data-index="0"
               >
                 00
               </li>
               <li
                 class="mx-time-item active"
-                data-value="1570149000000"
+                data-index="1"
               >
                 30
               </li>
@@ -126,18 +128,19 @@ exports[`TimeRange render: correct classes of the columns 1`] = `
             
             <ul
               class="mx-time-list"
+              data-index="2"
               data-type="ampm"
             >
               
               <li
                 class="mx-time-item active"
-                data-value="1570149000000"
+                data-index="0"
               >
                 AM
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570192200000"
+                data-index="1"
               >
                 PM
               </li>
@@ -179,42 +182,43 @@ exports[`TimeRange render: correct classes of the columns 1`] = `
             
             <ul
               class="mx-time-list"
+              data-index="0"
               data-type="hour"
             >
               
               <li
                 class="mx-time-item"
-                data-value="1570163400000"
+                data-index="0"
               >
                 12
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570170600000"
+                data-index="1"
               >
                 02
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570177800000"
+                data-index="2"
               >
                 04
               </li>
               <li
                 class="mx-time-item active"
-                data-value="1570185000000"
+                data-index="3"
               >
                 06
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570192200000"
+                data-index="4"
               >
                 08
               </li>
               <li
                 class="mx-time-item"
-                data-value="1570199400000"
+                data-index="5"
               >
                 10
               </li>
@@ -241,18 +245,19 @@ exports[`TimeRange render: correct classes of the columns 1`] = `
             
             <ul
               class="mx-time-list"
+              data-index="1"
               data-type="minute"
             >
               
               <li
                 class="mx-time-item"
-                data-value="1570183200000"
+                data-index="0"
               >
                 00
               </li>
               <li
                 class="mx-time-item active"
-                data-value="1570185000000"
+                data-index="1"
               >
                 30
               </li>
@@ -279,18 +284,19 @@ exports[`TimeRange render: correct classes of the columns 1`] = `
             
             <ul
               class="mx-time-list"
+              data-index="2"
               data-type="ampm"
             >
               
               <li
                 class="mx-time-item"
-                data-value="1570141800000"
+                data-index="0"
               >
                 AM
               </li>
               <li
                 class="mx-time-item active"
-                data-value="1570185000000"
+                data-index="1"
               >
                 PM
               </li>

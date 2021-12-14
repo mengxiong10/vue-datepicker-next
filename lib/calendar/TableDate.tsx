@@ -54,8 +54,10 @@ export function TableDate({
   };
 
   const getCellDate = (el: HTMLElement) => {
-    const value = el.getAttribute('data-value')!;
-    return new Date(parseInt(value, 10));
+    const index = el.getAttribute('data-index')!;
+    const [row, col] = index.split(',').map((v) => parseInt(v, 10));
+    const value = dates[row][col];
+    return new Date(value);
   };
 
   const handleCellClick = (evt: MouseEvent) => {
@@ -128,7 +130,7 @@ export function TableDate({
                 {showWeekNumber && (
                   <td
                     class={`${prefixClass}-week-number`}
-                    date-value={row[0].getTime()}
+                    data-index={`${i},0`}
                     onClick={handleCellClick}
                   >
                     <div>{getWeekNumber(row[0])}</div>
@@ -139,7 +141,7 @@ export function TableDate({
                     key={j}
                     class={['cell', getCellClasses(cell)]}
                     title={formatDate(cell, titleFormat)}
-                    data-value={cell.getTime()}
+                    data-index={`${i},${j}`}
                     onClick={handleCellClick}
                     onMouseenter={handleMouseEnter}
                     onMouseleave={handleMouseLeave}

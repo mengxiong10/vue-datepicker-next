@@ -161,78 +161,79 @@ exports[`TimePanel render: correct classes of the columns 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="0"
             data-type="hour"
           >
             
             <li
               class="mx-time-item active"
-              data-value="1570164030000"
+              data-index="0"
             >
               12
             </li>
             <li
               class="mx-time-item"
-              data-value="1570167630000"
+              data-index="1"
             >
               01
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570171230000"
+              data-index="2"
             >
               02
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570174830000"
+              data-index="3"
             >
               03
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570178430000"
+              data-index="4"
             >
               04
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570182030000"
+              data-index="5"
             >
               05
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570185630000"
+              data-index="6"
             >
               06
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570189230000"
+              data-index="7"
             >
               07
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570192830000"
+              data-index="8"
             >
               08
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570196430000"
+              data-index="9"
             >
               09
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570200030000"
+              data-index="10"
             >
               10
             </li>
             <li
               class="mx-time-item disabled"
-              data-value="1570203630000"
+              data-index="11"
             >
               11
             </li>
@@ -259,366 +260,367 @@ exports[`TimePanel render: correct classes of the columns 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="1"
             data-type="minute"
           >
             
             <li
               class="mx-time-item"
-              data-value="1570161630000"
+              data-index="0"
             >
               00
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161690000"
+              data-index="1"
             >
               01
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161750000"
+              data-index="2"
             >
               02
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161810000"
+              data-index="3"
             >
               03
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161870000"
+              data-index="4"
             >
               04
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161930000"
+              data-index="5"
             >
               05
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161990000"
+              data-index="6"
             >
               06
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162050000"
+              data-index="7"
             >
               07
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162110000"
+              data-index="8"
             >
               08
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162170000"
+              data-index="9"
             >
               09
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162230000"
+              data-index="10"
             >
               10
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162290000"
+              data-index="11"
             >
               11
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162350000"
+              data-index="12"
             >
               12
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162410000"
+              data-index="13"
             >
               13
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162470000"
+              data-index="14"
             >
               14
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162530000"
+              data-index="15"
             >
               15
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162590000"
+              data-index="16"
             >
               16
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162650000"
+              data-index="17"
             >
               17
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162710000"
+              data-index="18"
             >
               18
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162770000"
+              data-index="19"
             >
               19
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162830000"
+              data-index="20"
             >
               20
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162890000"
+              data-index="21"
             >
               21
             </li>
             <li
               class="mx-time-item"
-              data-value="1570162950000"
+              data-index="22"
             >
               22
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163010000"
+              data-index="23"
             >
               23
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163070000"
+              data-index="24"
             >
               24
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163130000"
+              data-index="25"
             >
               25
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163190000"
+              data-index="26"
             >
               26
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163250000"
+              data-index="27"
             >
               27
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163310000"
+              data-index="28"
             >
               28
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163370000"
+              data-index="29"
             >
               29
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163430000"
+              data-index="30"
             >
               30
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163490000"
+              data-index="31"
             >
               31
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163550000"
+              data-index="32"
             >
               32
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163610000"
+              data-index="33"
             >
               33
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163670000"
+              data-index="34"
             >
               34
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163730000"
+              data-index="35"
             >
               35
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163790000"
+              data-index="36"
             >
               36
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163850000"
+              data-index="37"
             >
               37
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163910000"
+              data-index="38"
             >
               38
             </li>
             <li
               class="mx-time-item"
-              data-value="1570163970000"
+              data-index="39"
             >
               39
             </li>
             <li
               class="mx-time-item active"
-              data-value="1570164030000"
+              data-index="40"
             >
               40
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164090000"
+              data-index="41"
             >
               41
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164150000"
+              data-index="42"
             >
               42
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164210000"
+              data-index="43"
             >
               43
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164270000"
+              data-index="44"
             >
               44
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164330000"
+              data-index="45"
             >
               45
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164390000"
+              data-index="46"
             >
               46
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164450000"
+              data-index="47"
             >
               47
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164510000"
+              data-index="48"
             >
               48
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164570000"
+              data-index="49"
             >
               49
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164630000"
+              data-index="50"
             >
               50
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164690000"
+              data-index="51"
             >
               51
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164750000"
+              data-index="52"
             >
               52
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164810000"
+              data-index="53"
             >
               53
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164870000"
+              data-index="54"
             >
               54
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164930000"
+              data-index="55"
             >
               55
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164990000"
+              data-index="56"
             >
               56
             </li>
             <li
               class="mx-time-item"
-              data-value="1570165050000"
+              data-index="57"
             >
               57
             </li>
             <li
               class="mx-time-item"
-              data-value="1570165110000"
+              data-index="58"
             >
               58
             </li>
             <li
               class="mx-time-item"
-              data-value="1570165170000"
+              data-index="59"
             >
               59
             </li>
@@ -645,366 +647,367 @@ exports[`TimePanel render: correct classes of the columns 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="2"
             data-type="second"
           >
             
             <li
               class="mx-time-item"
-              data-value="1570164000000"
+              data-index="0"
             >
               00
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164001000"
+              data-index="1"
             >
               01
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164002000"
+              data-index="2"
             >
               02
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164003000"
+              data-index="3"
             >
               03
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164004000"
+              data-index="4"
             >
               04
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164005000"
+              data-index="5"
             >
               05
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164006000"
+              data-index="6"
             >
               06
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164007000"
+              data-index="7"
             >
               07
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164008000"
+              data-index="8"
             >
               08
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164009000"
+              data-index="9"
             >
               09
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164010000"
+              data-index="10"
             >
               10
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164011000"
+              data-index="11"
             >
               11
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164012000"
+              data-index="12"
             >
               12
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164013000"
+              data-index="13"
             >
               13
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164014000"
+              data-index="14"
             >
               14
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164015000"
+              data-index="15"
             >
               15
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164016000"
+              data-index="16"
             >
               16
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164017000"
+              data-index="17"
             >
               17
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164018000"
+              data-index="18"
             >
               18
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164019000"
+              data-index="19"
             >
               19
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164020000"
+              data-index="20"
             >
               20
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164021000"
+              data-index="21"
             >
               21
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164022000"
+              data-index="22"
             >
               22
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164023000"
+              data-index="23"
             >
               23
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164024000"
+              data-index="24"
             >
               24
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164025000"
+              data-index="25"
             >
               25
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164026000"
+              data-index="26"
             >
               26
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164027000"
+              data-index="27"
             >
               27
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164028000"
+              data-index="28"
             >
               28
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164029000"
+              data-index="29"
             >
               29
             </li>
             <li
               class="mx-time-item active"
-              data-value="1570164030000"
+              data-index="30"
             >
               30
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164031000"
+              data-index="31"
             >
               31
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164032000"
+              data-index="32"
             >
               32
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164033000"
+              data-index="33"
             >
               33
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164034000"
+              data-index="34"
             >
               34
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164035000"
+              data-index="35"
             >
               35
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164036000"
+              data-index="36"
             >
               36
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164037000"
+              data-index="37"
             >
               37
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164038000"
+              data-index="38"
             >
               38
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164039000"
+              data-index="39"
             >
               39
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164040000"
+              data-index="40"
             >
               40
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164041000"
+              data-index="41"
             >
               41
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164042000"
+              data-index="42"
             >
               42
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164043000"
+              data-index="43"
             >
               43
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164044000"
+              data-index="44"
             >
               44
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164045000"
+              data-index="45"
             >
               45
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164046000"
+              data-index="46"
             >
               46
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164047000"
+              data-index="47"
             >
               47
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164048000"
+              data-index="48"
             >
               48
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164049000"
+              data-index="49"
             >
               49
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164050000"
+              data-index="50"
             >
               50
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164051000"
+              data-index="51"
             >
               51
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164052000"
+              data-index="52"
             >
               52
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164053000"
+              data-index="53"
             >
               53
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164054000"
+              data-index="54"
             >
               54
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164055000"
+              data-index="55"
             >
               55
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164056000"
+              data-index="56"
             >
               56
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164057000"
+              data-index="57"
             >
               57
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164058000"
+              data-index="58"
             >
               58
             </li>
             <li
               class="mx-time-item"
-              data-value="1570164059000"
+              data-index="59"
             >
               59
             </li>
@@ -1031,18 +1034,19 @@ exports[`TimePanel render: correct classes of the columns 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="3"
             data-type="ampm"
           >
             
             <li
               class="mx-time-item"
-              data-value="1570120830000"
+              data-index="0"
             >
               AM
             </li>
             <li
               class="mx-time-item active"
-              data-value="1570164030000"
+              data-index="1"
             >
               PM
             </li>
@@ -1225,30 +1229,31 @@ exports[`TimePanel render: correct columns by format 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="0"
             data-type="hour"
           >
             
             <li
               class="mx-time-item"
-              data-value="1570147200000"
+              data-index="0"
             >
               08
             </li>
             <li
               class="mx-time-item"
-              data-value="1570150800000"
+              data-index="1"
             >
               09
             </li>
             <li
               class="mx-time-item"
-              data-value="1570154400000"
+              data-index="2"
             >
               10
             </li>
             <li
               class="mx-time-item"
-              data-value="1570158000000"
+              data-index="3"
             >
               11
             </li>
@@ -1275,18 +1280,19 @@ exports[`TimePanel render: correct columns by format 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="1"
             data-type="minute"
           >
             
             <li
               class="mx-time-item active"
-              data-value="1570118400000"
+              data-index="0"
             >
               00
             </li>
             <li
               class="mx-time-item"
-              data-value="1570120200000"
+              data-index="1"
             >
               30
             </li>
@@ -1313,18 +1319,19 @@ exports[`TimePanel render: correct columns by format 1`] = `
           
           <ul
             class="mx-time-list"
+            data-index="2"
             data-type="ampm"
           >
             
             <li
               class="mx-time-item active"
-              data-value="1570118400000"
+              data-index="0"
             >
               AM
             </li>
             <li
               class="mx-time-item"
-              data-value="1570161600000"
+              data-index="1"
             >
               PM
             </li>
