@@ -48,32 +48,33 @@ export default defineComponent({
     return () => {
       return (
         <div class="container">
-          <div class="sidebar">
-            {list.value.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                title={item.title}
-                innerHTML={item.title}
-                class={{ active: activeTitleId.value === item.id }}
-              ></a>
-            ))}
-          </div>
-          <div class="main" onScroll={handleScroll}>
-            <header>
-              <a
-                style="margin-right: 10px"
-                class="mx-btn-text mx-btn"
-                href="https://github.com/mengxiong10/vue-datepicker-next"
-                target="_blank"
-              >
-                GitHub
-              </a>
+          <header class="header">
+            <a
+              class="mx-btn-text mx-btn title"
+              href="https://github.com/mengxiong10/vue-datepicker-next"
+              target="_blank"
+            >
+              Vue-datepicker-next
+            </a>
+            <div>
               <button onClick={handleChangeLocale} class="mx-btn">
                 {lang.value === 'en' ? '中文' : 'English'}
               </button>
-            </header>
-            <div class="content">
+            </div>
+          </header>
+          <div class="main">
+            <div class="sidebar">
+              {list.value.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  title={item.title}
+                  innerHTML={item.title}
+                  class={{ active: activeTitleId.value === item.id }}
+                ></a>
+              ))}
+            </div>
+            <div class="content" onScroll={handleScroll}>
               {list.value.map((item) => {
                 const { Component, id, ...rest } = item;
                 const props = {

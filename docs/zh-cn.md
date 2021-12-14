@@ -46,6 +46,34 @@
 './demo/Disabled.vue'
 ```
 
+### 隐藏秒和显示 am/pm
+
+时间选择的列是自动显示通过 `format`的设置.
+
+你可以通过 `showHour` `showMinute` `showSecond` 覆盖默认值
+
+```demo
+'./demo/HideSeconds.vue'
+```
+
+### 间隔的时间和自定义时间选择
+
+设置间隔的时间通过`hourStep` `minuteStep` `secondStep`.
+
+设置自定义的选择通过`hourOptions` `minuteOptions` `secondOptions`.
+
+```demo
+'./demo/MinuteStep.vue'
+```
+
+### 固定的时间列表
+
+可以通过 `timePickerOptions` 提供一个固定的时间列表选择
+
+```demo
+'./demo/FixedTimeList.vue'
+```
+
 ### 快捷选项
 
 可以通过设置 `shortcuts` 提升用户体验.
@@ -74,32 +102,4 @@
 
 ```demo
 './demo/ControlOpen.vue'
-```
-
-### 隐藏秒和显示 am/pm
-
-时间选择的列是自动显示通过 `format`的设置.
-
-你可以通过 `showHour` `showMinute` `showSecond` 覆盖默认值
-
-```demo
-'./demo/HideSeconds.vue'
-```
-
-### 间隔的时间和自定义时间选择
-
-设置间隔的时间通过`hourStep` `minuteStep` `secondStep`.
-
-设置自定义的选择通过`hourOptions` `minuteOptions` `secondOptions`.
-
-```demo
-'./demo/MinuteStep.vue'
-```
-
-### 固定的时间列表
-
-可以通过 `timePickerOptions` 提供一个固定的时间列表选择
-
-```demo
-'./demo/FixedTimeList.vue'
 ```

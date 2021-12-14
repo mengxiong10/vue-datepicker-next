@@ -23,9 +23,19 @@ svg {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
 .container {
   display: flex;
+  flex-direction: column;
   height: 100%;
+  background-color: #fff;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {
@@ -51,10 +61,6 @@ svg {
     text-overflow: ellipsis;
     border-left: 1px solid transparent;
     transition: all 0.3s ease;
-    text-decoration: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
     &:hover {
       color: mix(#fff, #1284e7, 0.8);
     }
@@ -64,23 +70,36 @@ svg {
   }
 }
 
-.main {
-  flex: 1;
-  padding: 10px 20px;
+.header {
   display: flex;
-  flex-direction: column;
-  header {
-    flex: 0 0 30px;
-    text-align: right;
-  }
-  p {
-    margin: 10px 0;
-  }
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  flex: 0 0 auto;
+  padding: 0 20px;
+  padding-left: 10px;
+  text-align: right;
+  border-bottom: 1px solid $border-color;
+  z-index: 10;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 
 .content {
   flex: 1;
+  padding: 10px 20px;
   overflow: auto;
+  p {
+    margin: 10px 0;
+  }
 }
 
 .highlight-code {
