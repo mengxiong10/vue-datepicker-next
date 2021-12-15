@@ -51,32 +51,6 @@ export function pick<T extends PlainObject, K extends keyof T>(obj: T, props: K 
   return res;
 }
 
-export function omit<T extends PlainObject, K extends keyof T>(
-  obj: T,
-  props: K | K[] | ((val: T[keyof T], key: keyof T) => boolean)
-): Omit<T, K> {
-  const res: any = {};
-
-  if (!isPlainObject(obj)) return res;
-
-  const fn =
-    typeof props === 'function'
-      ? props
-      : (val: T[keyof T], key: keyof T) => {
-          const list = Array.isArray(props) ? props : [props];
-          return list.indexOf(key as K) !== -1;
-        };
-
-  Object.keys(obj).forEach((key: keyof T) => {
-    const val = obj[key];
-    if (!fn(val, key)) {
-      res[key] = val;
-    }
-  });
-
-  return res;
-}
-
 /**
  * deep merge two object without merging array
  * @param {object} target

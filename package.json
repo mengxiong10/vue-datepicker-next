@@ -21,7 +21,7 @@
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "lint": "vue-tsc --noEmit && eslint lib/**/*.{tsx,ts}",
     "test": "jest",
-    "cov": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "cov": "jest --coverage",
     "format": "prettier --write lib/**/* && eslint --fix lib/**/*.{tsx,ts}",
     "docs:dev": "vite serve docs",
     "docs:build": "vite build docs",
