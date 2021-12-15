@@ -4,11 +4,12 @@
 
 > A Datepicker Component For Vue3
 
+![tests](https://github.com/mengxiong10/vue-datepicker-next/actions/workflows/tests.yml/badge.svg)
 <a href="https://www.npmjs.com/package/vue-datepicker-next">
-  <img src="https://img.shields.io/npm/v/vue-datepicker-next.svg" alt="npm">
+<img src="https://img.shields.io/npm/v/vue-datepicker-next.svg" alt="npm">
 </a>
 <a href="LICENSE">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
 </a>
 
 ## Demo
