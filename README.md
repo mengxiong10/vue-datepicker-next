@@ -281,18 +281,18 @@ Set fixed time list to select;
 
 ### Events
 
-| Name            | Description                                                                            | Callback Arguments                     |
-| --------------- | -------------------------------------------------------------------------------------- | -------------------------------------- |
-| input           | When the value change(v-model event)                                                   | date                                   |
-| change          | When the value change(same as input)                                                   | date                                   |
-| open            | When panel opening                                                                     | event                                  |
-| close           | When panel closing                                                                     |                                        |
-| confirm         | When click 'confirm' button                                                            | date                                   |
-| clear           | When click 'clear' button                                                              |                                        |
-| input-error     | When user type a invalid Date                                                          | the input text                         |
-| pick            | when select date [#429](https://github.com/mengxiong10/vue-datepicker-next/issues/429) | date                                   |
-| calendar-change | when change the calendar                                                               | date, oldDate                          |
-| panel-change    | when the calendar panel changes                                                        | type('year'\|'month'\|'date'), oldType |
+| Name            | Description                                                                            | Callback Arguments                                     |
+| --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| update:value    | When the value change(v-model:value event)                                             | date                                                   |
+| change          | When the value change(same as input)                                                   | date, type('date'\|'hour'\|'minute'\|'second'\|'ampm') |
+| open            | When panel opening                                                                     | event                                                  |
+| close           | When panel closing                                                                     |                                                        |
+| confirm         | When click 'confirm' button                                                            | date                                                   |
+| clear           | When click 'clear' button                                                              |                                                        |
+| input-error     | When user type a invalid Date                                                          | the input text                                         |
+| pick            | when select date [#429](https://github.com/mengxiong10/vue-datepicker-next/issues/429) | date                                                   |
+| calendar-change | when change the calendar                                                               | date, oldDate                                          |
+| panel-change    | when the calendar panel changes                                                        | type('year'\|'month'\|'date'), oldType                 |
 
 ### Slots
 

@@ -172,7 +172,7 @@ describe('DatePicker', () => {
         value: value,
         format: 'YYYY/MM/DD',
         open: true,
-        onChange: mockFn,
+        ['onUpdate:value']: mockFn,
       },
     });
     const cell = wrapper.find('[title="2019-10-01"]');
@@ -204,7 +204,7 @@ describe('DatePicker', () => {
         open: true,
         valueType: 'YYYY/MM/DD',
         appendToBody: false,
-        onChange: mockFn,
+        ['onUpdate:value']: mockFn,
         shortcuts: [
           {
             text: 'Today',
@@ -256,7 +256,7 @@ describe('DatePicker', () => {
         confirm: true,
         confirmText: 'test',
         appendToBody: false,
-        onChange: mockFn,
+        ['onUpdate:value']: mockFn,
       },
     });
     await wrapper.find('input').trigger('focus');
@@ -295,7 +295,7 @@ describe('DatePicker', () => {
         range: false,
         value: new Date(2019, 10, 9),
         onClear: mockClearFn,
-        onChange: mockChangeFn,
+        ['onUpdate:value']: mockChangeFn,
       },
     });
     wrapper.find('.mx-icon-clear').trigger('click');
@@ -345,7 +345,7 @@ describe('DatePicker', () => {
         separator,
         range: true,
         valueType: 'format',
-        onChange: mockFn,
+        ['onUpdate:value']: mockFn,
       },
     });
     const input = wrapper.find('input');
@@ -369,7 +369,7 @@ describe('DatePicker', () => {
         open: true,
         appendToBody: false,
         value,
-        onChange: mockFn,
+        ['onUpdate:value']: mockFn,
       },
     });
     wrapper.find('.mx-date-row .active').trigger('click');
@@ -388,7 +388,7 @@ describe('DatePicker', () => {
         disabledDate: (date) => {
           return date < someday;
         },
-        onChange: mockFn,
+        ['onUpdate:value']: mockFn,
         onInputError: inputErrorFn,
       },
     });

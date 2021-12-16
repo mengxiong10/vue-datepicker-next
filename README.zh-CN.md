@@ -270,20 +270,20 @@ data() {
 
 ### 事件
 
-| 名称            | 描述                                                                               | 回调函数的参数                         |
-| --------------- | ---------------------------------------------------------------------------------- | -------------------------------------- |
-| input           | 当选择日期的事件触发                                                               | date                                   |
-| change          | 当选择日期的事件触发                                                               | date                                   |
-| open            | 当弹出层打开时候                                                                   | event                                  |
-| close           | 当弹出层关闭时候                                                                   |                                        |
-| confirm         | 当点击确认按钮                                                                     | date                                   |
-| clear           | 当点击清除按钮                                                                     |                                        |
-| input-error     | 当输入一个无效的时间                                                               | input text                             |
-| focus           | 当输入框有焦点                                                                     |                                        |
-| blur            | 当输入框失焦                                                                       |                                        |
-| pick            | 当点击日期时 [#429](https://github.com/mengxiong10/vue-datepicker-next/issues/429) | date                                   |
-| calendar-change | 当改变年月时                                                                       | date, oldDate                          |
-| panel-change    | 当日历面板改变时                                                                   | type('year'\|'month'\|'date'), oldType |
+| 名称            | 描述                                                                               | 回调函数的参数                                         |
+| --------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| update:value    | 当选择日期的事件触发                                                               | date                                                   |
+| change          | 当选择日期的事件触发                                                               | date, type('date'\|'hour'\|'minute'\|'second'\|'ampm') |
+| open            | 当弹出层打开时候                                                                   | event                                                  |
+| close           | 当弹出层关闭时候                                                                   |                                                        |
+| confirm         | 当点击确认按钮                                                                     | date                                                   |
+| clear           | 当点击清除按钮                                                                     |                                                        |
+| input-error     | 当输入一个无效的时间                                                               | input text                                             |
+| focus           | 当输入框有焦点                                                                     |                                                        |
+| blur            | 当输入框失焦                                                                       |                                                        |
+| pick            | 当点击日期时 [#429](https://github.com/mengxiong10/vue-datepicker-next/issues/429) | date                                                   |
+| calendar-change | 当改变年月时                                                                       | date, oldDate                                          |
+| panel-change    | 当日历面板改变时                                                                   | type('year'\|'month'\|'date'), oldType                 |
 
 ### Slots
 

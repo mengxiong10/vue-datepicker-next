@@ -29,7 +29,7 @@ export interface PickerBaseProps {
   onClose?: () => void;
   onOpen?: () => void;
   onConfirm?: (v: any) => void;
-  onChange?: (v: any) => void;
+  onChange?: (v: any, type?: string) => void;
   ['onUpdate:open']?: (open: boolean) => void;
   ['onUpdate:value']?: (v: any) => void;
 }
@@ -39,7 +39,7 @@ export type PickerProps = PickerBaseProps & PickerInputBaseProps;
 export interface SlotProps {
   value: any;
   ['onUpdate:value']: (value: any, type: string) => void;
-  emit: (value: any, close?: boolean) => void;
+  emit: (value: any, type?: string, close?: boolean) => void;
 }
 
 function Picker(originalProps: PickerProps, { slots }: SetupContext) {
@@ -136,10 +136,10 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
     return value2date(value);
   });
 
-  const emitValue = (date: Date | Date[] | null | null[], close = true) => {
+  const emitValue = (date: Date | Date[] | null | null[], type?: string, close = true) => {
     const value = Array.isArray(date) ? date.map(date2value) : date2value(date);
     props['onUpdate:value']?.(value);
-    props.onChange?.(value);
+    props.onChange?.(value, type);
     if (close) {
       closePopup();
     }
@@ -159,7 +159,7 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
       currentValue.value = val;
     } else {
       // type === 'datetime', click the time should close popup
-      emitValue(val, !props.multiple && (type === props.type || type === 'time'));
+      emitValue(val, type, !props.multiple && (type === props.type || type === 'time'));
     }
   };
 
