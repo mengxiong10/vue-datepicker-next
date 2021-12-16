@@ -282,7 +282,7 @@ data() {
 | focus           | 当输入框有焦点                                                                     |                                                        |
 | blur            | 当输入框失焦                                                                       |                                                        |
 | pick            | 当点击日期时 [#429](https://github.com/mengxiong10/vue-datepicker-next/issues/429) | date                                                   |
-| calendar-change | 当改变年月时                                                                       | date, oldDate                                          |
+| calendar-change | 当改变年月时                                                                       | date                                                   |
 | panel-change    | 当日历面板改变时                                                                   | type('year'\|'month'\|'date'), oldType                 |
 
 ### Slots

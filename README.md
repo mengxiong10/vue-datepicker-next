@@ -291,7 +291,7 @@ Set fixed time list to select;
 | clear           | When click 'clear' button                                                              |                                                        |
 | input-error     | When user type a invalid Date                                                          | the input text                                         |
 | pick            | when select date [#429](https://github.com/mengxiong10/vue-datepicker-next/issues/429) | date                                                   |
-| calendar-change | when change the calendar                                                               | date, oldDate                                          |
+| calendar-change | when change the calendar                                                               | date                                                   |
 | panel-change    | when the calendar panel changes                                                        | type('year'\|'month'\|'date'), oldType                 |
 
 ### Slots

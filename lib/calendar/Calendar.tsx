@@ -29,7 +29,7 @@ export interface CalendarProps {
   getYearPanel?: () => number[][];
   onDateMouseEnter?: (value: Date) => void;
   onDateMouseLeave?: (value: Date) => void;
-  onCalendarChange?: (value: Date, oldValue: Date) => void;
+  onCalendarChange?: (value: Date) => void;
   onPanelChange?: (value: PanelType, oldValue: PanelType) => void;
   onPick?: (value: Date) => void;
   ['onUpdate:value']?: (v: any, type: string) => void;
@@ -64,10 +64,8 @@ function Calendar(originalProps: CalendarProps) {
   });
 
   const handleCalendarChange = (calendar: Date) => {
-    const oldCalendar = new Date(innerCalendar.value);
     innerCalendar.value = calendar;
-    props.onCalendarChange?.(calendar, oldCalendar);
-    // this.dispatchDatePicker('calendar-change', calendar, oldCalendar, type);
+    props.onCalendarChange?.(calendar);
   };
 
   const panel = ref<PanelType>('date');
