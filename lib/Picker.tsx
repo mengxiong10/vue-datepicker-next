@@ -32,6 +32,7 @@ export interface PickerBaseProps {
   onChange?: (v: any, type?: string) => void;
   ['onUpdate:open']?: (open: boolean) => void;
   ['onUpdate:value']?: (v: any) => void;
+  required?: boolean;
 }
 
 export type PickerProps = PickerBaseProps & PickerInputBaseProps;
@@ -51,6 +52,7 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
     disabledDate: () => false,
     disabledTime: () => false,
     confirmText: 'OK',
+    required: false,
   });
 
   providePrefixClass(props.prefixClass);
@@ -293,6 +295,7 @@ const pickerbaseProps = keys<PickerBaseProps>()([
   'onChange',
   'onUpdate:open',
   'onUpdate:value',
+  'required',
 ]);
 
 const pickerProps = [...pickerbaseProps, ...pickerInputBaseProps];

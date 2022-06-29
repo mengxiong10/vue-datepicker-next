@@ -19,6 +19,7 @@ export interface PickerInputBaseProps {
   renderInputText?: (v: Date | Date[]) => string;
   onInputError?: (text: string) => void;
   onClear?: () => void;
+  required?: boolean;
 }
 
 export interface PickerInputProps extends PickerInputBaseProps {
@@ -142,6 +143,7 @@ function PickerInput(originalProps: PickerInputProps, { slots }: SetupContext) {
       onKeydown: handleKeydown,
       onInput: handleInput,
       onChange: handleChange,
+      required: props.required,
     };
 
     return (
@@ -174,6 +176,7 @@ export const pickerInputBaseProps = keys<PickerInputBaseProps>()([
   'renderInputText',
   'onInputError',
   'onClear',
+  'required',
 ]);
 
 const pickerInputProps = keys<PickerInputProps>()([

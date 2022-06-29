@@ -36,6 +36,7 @@ const booleanKeys = keys<PickByValueExact<Required<DatePickerComponentProps>, bo
   'showTimePanel',
   'showWeekNumber',
   'use12h',
+  'required',
 ]);
 
 const formatMap = {
