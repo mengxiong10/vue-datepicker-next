@@ -155,6 +155,7 @@ You can also override some of the default locale by `lang`.
 | time-picker-options | set fixed time list to select                    | [time-picker-options](#time-picker-options)      | null           |
 | prefix-class        | set prefix class                                 | `string`                                         | 'mx'           |
 | scroll-duration     | set the duration of scroll when hour is selected | `number`                                         | 100            |
+| required            | if true, html 5 validation                       | `boolean`                                        | false          |
 
 ###
 
