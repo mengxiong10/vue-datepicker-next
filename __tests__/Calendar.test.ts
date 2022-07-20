@@ -96,6 +96,58 @@ describe('CalendarPanel', () => {
     expect(mockFn).not.toHaveBeenCalled();
   });
 
+  [true, false].forEach((holidayClickable) => {
+    it('props: holidayClickable', () => {
+      const holidayDate = (date: Date) => {
+        return date === new Date(2019, 9, 1);
+      };
+      const mockFn = jest.fn();
+      wrapper = mount(Calendar, {
+        props: {
+          value: new Date(2019, 9, 1),
+          ['onUpdate:value']: mockFn,
+          holidayClickable: holidayClickable,
+          holidayDate: holidayDate,
+        },
+      });
+      wrapper.find('.mx-table-date td').trigger('click');
+
+      if (holidayClickable) {
+        expect(mockFn).toHaveBeenCalled();
+      } else {
+        expect(mockFn).not.toHaveBeenCalled();
+      }
+    });
+  });
+
+  it('prop: holidayDate', () => {
+    const holidayDate = (date: Date) => {
+      return date < new Date(2019, 9, 1) || date > new Date(2019, 9, 20);
+    };
+    const mockFn = jest.fn();
+    wrapper = mount(Calendar, {
+      props: {
+        value: new Date(2019, 9, 4),
+        ['onUpdate:value']: mockFn,
+        holidayClickable: false,
+        holidayDate: holidayDate,
+      },
+    });
+    const tds = wrapper.findAll('.mx-table-date td');
+    for (let i = 0; i < 42; i++) {
+      const td = tds[i];
+      const classes = td.classes();
+      if (i < 2 || i > 21) {
+        expect(classes).toContain('holiday');
+      } else {
+        expect(classes).not.toContain('holiday');
+      }
+    }
+
+    tds[1].trigger('click');
+    expect(mockFn).not.toHaveBeenCalled();
+  });
+
   const renderType = (type: 'date' | 'month' | 'year') => {
     it(`prop: type=${type}`, () => {
       wrapper = mount(Calendar, {

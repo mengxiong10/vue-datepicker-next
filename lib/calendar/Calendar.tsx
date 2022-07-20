@@ -1,4 +1,5 @@
 import { computed, ref, watchEffect } from 'vue';
+import { PanelType, PickerType } from '../type';
 import {
   getValidDate,
   isValidDate,
@@ -8,11 +9,10 @@ import {
   startOfMonth,
   startOfYear,
 } from '../util/date';
+import { defineVueComponent, keys, withDefault } from '../vueUtil';
 import { TableDate } from './TableDate';
 import { TableMonth } from './TableMonth';
 import { TableYear } from './TableYear';
-import { PanelType, PickerType } from '../type';
-import { defineVueComponent, keys, withDefault } from '../vueUtil';
 
 export interface CalendarProps {
   type?: PickerType;
@@ -20,6 +20,8 @@ export interface CalendarProps {
   defaultValue?: Date;
   defaultPanel?: PickerType;
   disabledDate?: (value: Date, innerValue?: Date[]) => boolean;
+  holidayClickable?: boolean;
+  holidayDate?: (value: Date, innerValue?: Date[]) => boolean;
   getClasses?: (value: Date, innerValue: Date[], classes: string) => string[] | string;
   calendar?: Date;
   multiple?: boolean;
@@ -40,6 +42,8 @@ function Calendar(originalProps: CalendarProps) {
     defaultValue: startOfDay(new Date()),
     type: 'date' as PickerType,
     disabledDate: () => false,
+    holidayClickable: () => false,
+    holidayDate: () => false,
     getClasses: () => [],
     titleFormat: 'YYYY-MM-DD',
   });
@@ -85,8 +89,22 @@ function Calendar(originalProps: CalendarProps) {
     return props.disabledDate(new Date(date), innerValue.value);
   };
 
+  const isHoliday = (date: Date) => {
+    return props.holidayDate(new Date(date), innerValue.value);
+  };
+
+  const isClickable = (date: Date) => {
+    if (isDisabled(date)) {
+      return false;
+    }
+    if (!props.holidayClickable && isHoliday(date)) {
+      return false;
+    }
+    return true;
+  };
+
   const emitDate = (date: Date, type: string) => {
-    if (!isDisabled(date)) {
+    if (isClickable(date)) {
       props.onPick?.(date);
       if (props.multiple === true) {
         const nextDates = innerValue.value.filter((v) => v.getTime() !== date.getTime());
@@ -133,6 +151,8 @@ function Calendar(originalProps: CalendarProps) {
   const getCellClasses = (cellDate: Date, classes: string[] = []) => {
     if (isDisabled(cellDate)) {
       classes.push('disabled');
+    } else if (isHoliday(cellDate)) {
+      classes.push('holiday');
     } else if (innerValue.value.some((v) => v.getTime() === cellDate.getTime())) {
       classes.push('active');
     }
@@ -222,6 +242,8 @@ export const calendarProps = keys<CalendarProps>()([
   'defaultValue',
   'defaultPanel',
   'disabledDate',
+  'holidayDate',
+  'holidayClickable',
   'getClasses',
   'calendar',
   'multiple',
