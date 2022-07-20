@@ -99,7 +99,7 @@ describe('CalendarPanel', () => {
   [true, false].forEach((holidayClickable) => {
     it('props: holidayClickable', () => {
       const holidayDate = (date: Date) => {
-        return date === new Date(2019, 9, 1);
+        return date < new Date(2019, 9, 1) || date > new Date(2019, 9, 20);
       };
       const mockFn = jest.fn();
       wrapper = mount(Calendar, {

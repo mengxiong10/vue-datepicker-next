@@ -25,6 +25,8 @@ export interface PickerBaseProps {
   confirmText?: string;
   shortcuts?: Array<{ text: string; onClick: () => Date | Date[] }>;
   disabledDate?: (v: Date) => boolean;
+  holidayDate?: (v: Date) => boolean;
+  holidayClickable?: boolean;
   disabledTime?: (v: Date) => boolean;
   onClose?: () => void;
   onOpen?: () => void;
@@ -49,6 +51,8 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
     format: 'YYYY-MM-DD',
     type: 'date' as PickerType,
     disabledDate: () => false,
+    holidayDate: () => false,
+    holidayClickable: false,
     disabledTime: () => false,
     confirmText: 'OK',
   });

@@ -42,7 +42,7 @@ function Calendar(originalProps: CalendarProps) {
     defaultValue: startOfDay(new Date()),
     type: 'date' as PickerType,
     disabledDate: () => false,
-    holidayClickable: () => false,
+    holidayClickable: false,
     holidayDate: () => false,
     getClasses: () => [],
     titleFormat: 'YYYY-MM-DD',
@@ -97,10 +97,7 @@ function Calendar(originalProps: CalendarProps) {
     if (isDisabled(date)) {
       return false;
     }
-    if (!props.holidayClickable && isHoliday(date)) {
-      return false;
-    }
-    return true;
+    return !(!props.holidayClickable && isHoliday(date));
   };
 
   const emitDate = (date: Date, type: string) => {

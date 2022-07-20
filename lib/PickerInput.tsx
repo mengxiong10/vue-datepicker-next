@@ -26,6 +26,8 @@ export interface PickerInputProps extends PickerInputBaseProps {
   formatDate: (v: Date) => string;
   parseDate: (v: string) => Date;
   disabledDate: (v: Date) => boolean;
+  holidayDate: (v: Date) => boolean;
+  holidayClickable?: boolean;
   onChange: (v: Date | Date[] | null | null[]) => void;
   onFocus: () => void;
   onBlur: () => void;
