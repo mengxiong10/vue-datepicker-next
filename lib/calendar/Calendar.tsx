@@ -146,10 +146,11 @@ function Calendar(originalProps: CalendarProps) {
   };
 
   const getCellClasses = (cellDate: Date, classes: string[] = []) => {
+    if (isHoliday(cellDate)) {
+      classes.push('holiday');
+    }
     if (isDisabled(cellDate)) {
       classes.push('disabled');
-    } else if (isHoliday(cellDate)) {
-      classes.push('holiday');
     } else if (innerValue.value.some((v) => v.getTime() === cellDate.getTime())) {
       classes.push('active');
     }

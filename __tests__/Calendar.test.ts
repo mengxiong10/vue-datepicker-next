@@ -66,8 +66,12 @@ describe('CalendarPanel', () => {
     wrapper = mount(Calendar);
     const td = wrapper.find('.mx-table-date td:nth-child(6)');
     expect(td.classes()).not.toContain('active');
-    await wrapper.setProps({ value: new Date(2019, 9, 4) });
+    await wrapper.setProps({
+      value: new Date(2019, 9, 4),
+      holidayDate: () => true,
+    });
     expect(td.classes()).toContain('active');
+    expect(td.classes()).toContain('holiday');
   });
 
   it('prop: disabledDate', () => {

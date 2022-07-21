@@ -80,7 +80,7 @@
         ></DatePicker>
         <DatePicker v-model:value="value"
                     :holiday-clickable="true"
-                    :holiday-date="(date)=>date > new Date()">
+                    :holiday-date="()=>true">
         </DatePicker>
     </div>
 </template>
