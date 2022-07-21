@@ -41,6 +41,7 @@ function PickerInput(originalProps: PickerInputProps, { slots }: SetupContext) {
     clearable: true,
     range: false,
     multiple: false,
+    holidayClickable: true,
   });
   const prefixClass = usePrefixClass();
 
@@ -187,6 +188,8 @@ const pickerInputProps = keys<PickerInputProps>()([
   'onFocus',
   'onBlur',
   'onClick',
+  'holidayDate',
+  'holidayClickable',
   ...pickerInputBaseProps,
 ]);
 

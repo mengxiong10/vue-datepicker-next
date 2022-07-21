@@ -248,6 +248,8 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
           formatDate={formatDate}
           parseDate={parseDate}
           disabledDate={disabledDateTime}
+          holidayDate={props.holidayDate}
+          holidayClickable={props.holidayClickable}
           onChange={emitValue}
           onClick={openPopup}
           onFocus={openPopup}
@@ -297,6 +299,8 @@ const pickerbaseProps = keys<PickerBaseProps>()([
   'onChange',
   'onUpdate:open',
   'onUpdate:value',
+  'holidayClickable',
+  'holidayDate',
 ]);
 
 const pickerProps = [...pickerbaseProps, ...pickerInputBaseProps];
