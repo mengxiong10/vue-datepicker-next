@@ -1,4 +1,4 @@
-import { usePrefixClass } from '../context';
+import { usePrefixClass, useLocale } from '../context';
 import { chunk, last } from '../util/base';
 import { createDate } from '../util/date';
 import { TableHeader, TableHeaderProps } from './TableHeader';
@@ -25,6 +25,7 @@ export function TableYear({
   onUpdateCalendar,
 }: TableYearProps) {
   const prefixClass = usePrefixClass();
+  const locale = useLocale().value;
 
   const getDate = (year: number) => {
     return createDate(year, 0);
@@ -37,8 +38,8 @@ export function TableYear({
   };
 
   const years = getYearPanel(new Date(calendar));
-  const firstYear = years[0][0];
-  const lastYear = last(last(years));
+  const firstYear = locale.buddhistYear ? 543 + years[0][0] : years[0][0];
+  const lastYear = locale.buddhistYear ? 543 + (last(last(years)) ?? 0) : last(last(years));
 
   return (
     <div class={`${prefixClass}-calendar ${prefixClass}-calendar-panel-year`}>
@@ -58,7 +59,7 @@ export function TableYear({
                   data-year={cell}
                   onClick={handleClick}
                 >
-                  <div>{cell}</div>
+                  <div>{locale.buddhistYear ? 543 + cell : cell}</div>
                 </td>
               ))}
             </tr>

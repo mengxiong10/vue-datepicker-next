@@ -46,7 +46,11 @@ export function TableDate({
   const dates = chunk(getCalendar({ firstDayOfWeek, year, month }), 7);
 
   const formatDate = (date: Date, fmt: string) => {
-    return format(date, fmt, { locale: locale.formatLocale });
+    if (locale.buddhistYear && fmt == 'YYYY') {
+      return '' + (parseInt(format(date, fmt, { locale: locale.formatLocale })) + 543);
+    } else {
+      return format(date, fmt, { locale: locale.formatLocale });
+    }
   };
 
   const handlePanelChange = (panel: 'year' | 'month') => {
