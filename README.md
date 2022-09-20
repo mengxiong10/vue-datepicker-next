@@ -1,8 +1,9 @@
-# vue-datepicker-next
+# vue-datepicker-next-th
 
-[中文版](https://github.com/mengxiong10/vue-datepicker-next/blob/main/README.zh-CN.md)
+fork from 
+https://github.com/mengxiong10/vue-datepicker-next/blob/main/README.zh-CN.md
 
-> A Datepicker Component For Vue3
+> A Datepicker Component For Vue3 with Thai year support
 
 ![tests](https://github.com/mengxiong10/vue-datepicker-next/actions/workflows/tests.yml/badge.svg)
 <a href="https://www.npmjs.com/package/vue-datepicker-next">
