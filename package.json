@@ -1,7 +1,7 @@
 {
-  "name": "vue-datepicker-next",
-  "version": "1.0.2",
-  "description": "A Datepicker Component For Vue3",
+  "name": "vue-datepicker-next-th",
+  "version": "1.0.4",
+  "description": "A datepicker / datetimepicker component for Vue3 / with thai year support ",
   "main": "./index.js",
   "module": "./index.es.js",
   "unpkg": "./index.js",
@@ -40,7 +40,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mengxiong10/vue-datepicker-next.git"
+    "url": "git+https://github.com/TKongsupon/vue-datepicker-next-th.git"
   },
   "keywords": [
     "vue",
@@ -48,12 +48,12 @@
     "datepicker",
     "datetimepicker"
   ],
-  "author": "xiemengxiong",
+  "author": "TKongsupon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mengxiong10/vue-datepicker-next/issues"
+    "url": "https://github.com/TKongsupon/vue-datepicker-next-th/issues"
   },
-  "homepage": "https://github.com/mengxiong10/vue-datepicker-next#readme",
+  "homepage": "https://github.com/TKongsupon/vue-datepicker-next-th#readme",
   "lint-staged": {
     "**/*.{tsx,ts}": [
       "eslint --fix",
