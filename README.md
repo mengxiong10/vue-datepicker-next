@@ -96,8 +96,9 @@ You can also override some of the default locale by `lang`.
             firstDayOfWeek: 1,
           },
           monthBeforeYear: false,
+          buddhistYear: true,
         },
-        langString: 'zh-cn',
+        langString: 'th',
       };
     },
   };
