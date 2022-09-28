@@ -202,6 +202,14 @@
       color: $calendar-active-color;
       background-color: $calendar-active-background-color;
     }
+    &.is-start {
+      border-top-left-radius: $calender-cell-border-radius;
+      border-bottom-left-radius: $calender-cell-border-radius;
+    }
+    &.is-end {
+      border-top-right-radius: $calender-cell-border-radius;
+      border-bottom-right-radius: $calender-cell-border-radius;
+    }
     &.in-range,
     &.hover-in-range {
       color: $calendar-in-range-color;

@@ -136,6 +136,11 @@ function Calendar(originalProps: CalendarProps) {
     } else if (innerValue.value.some((v) => v.getTime() === cellDate.getTime())) {
       classes.push('active');
     }
+    const length = innerValue.value.length;
+    if (length) {
+      if (cellDate.getTime() == innerValue.value[0].getTime()) classes.push('is-start');
+      if (cellDate.getTime() == innerValue.value[length - 1].getTime()) classes.push('is-end');
+    }
     return classes.concat(props.getClasses(cellDate, innerValue.value, classes.join(' ')));
   };
 
