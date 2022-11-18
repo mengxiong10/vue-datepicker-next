@@ -35,7 +35,7 @@ $ npm install vue-datepicker-next --save
     components: { DatePicker },
     data() {
       return {
-        time0: null
+        time0: null,
         time1: null,
         time2: null,
         time3: null,
