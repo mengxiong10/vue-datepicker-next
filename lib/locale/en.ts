@@ -5,6 +5,7 @@ const lang = {
   yearFormat: 'YYYY',
   monthFormat: 'MMM',
   monthBeforeYear: true,
+  buddhistYear: false,
 };
 
 export default lang;

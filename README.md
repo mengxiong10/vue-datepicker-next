@@ -1,12 +1,12 @@
-# vue-datepicker-next
+# vue-datepicker-next-th
 
-[中文版](https://github.com/mengxiong10/vue-datepicker-next/blob/main/README.zh-CN.md)
+fork from 
+https://github.com/mengxiong10/vue-datepicker-next/blob/main/README.zh-CN.md
 
-> A Datepicker Component For Vue3
+> A Datepicker Component For Vue3 with Thai year support
 
-![tests](https://github.com/mengxiong10/vue-datepicker-next/actions/workflows/tests.yml/badge.svg)
-<a href="https://www.npmjs.com/package/vue-datepicker-next">
-<img src="https://img.shields.io/npm/v/vue-datepicker-next.svg" alt="npm">
+<a href="https://www.npmjs.com/package/vue-datepicker-next-th">
+<img src="https://img.shields.io/npm/v/vue-datepicker-next-th.svg" alt="npm">
 </a>
 <a href="LICENSE">
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
@@ -95,8 +95,9 @@ You can also override some of the default locale by `lang`.
             firstDayOfWeek: 1,
           },
           monthBeforeYear: false,
+          buddhistYear: true,
         },
-        langString: 'zh-cn',
+        langString: 'th',
       };
     },
   };

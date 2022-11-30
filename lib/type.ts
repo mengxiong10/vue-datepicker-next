@@ -12,6 +12,8 @@ export interface Locale {
   monthFormat: string;
   // the calendar title of month before year
   monthBeforeYear: boolean;
+  // the calendar show year format as Buddhist calendar (AD + 543)
+  buddhistYear: boolean;
 }
 
 export type PlainObject = Record<string, any>;

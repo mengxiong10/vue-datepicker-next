@@ -1,15 +1,20 @@
-import { usePrefixClass } from '../context';
+import { usePrefixClass, useLocale } from '../context';
 import { chunk, last } from '../util/base';
 import { createDate } from '../util/date';
 import { TableHeader, TableHeaderProps } from './TableHeader';
 export interface TableYearProps extends Omit<TableHeaderProps, 'type'> {
   getCellClasses?: (v: Date) => string[] | string;
-  getYearPanel?: (v: Date) => number[][];
+  getYearPanel?: (v: Date, l: any) => number[][];
   onSelect: (v: Date) => void;
 }
 
-const getDefaultYears = (calendar: Date) => {
-  const firstYear = Math.floor(calendar.getFullYear() / 10) * 10;
+const getDefaultYears = (calendar: Date, locale: any) => {
+  let firstYear;
+  if (locale.buddhistYear) {
+    firstYear = Math.floor((calendar.getFullYear() + 543) / 10) * 10 - 543;
+  } else {
+    firstYear = Math.floor(calendar.getFullYear() / 10) * 10;
+  }
   const years = [];
   for (let i = 0; i < 10; i++) {
     years.push(firstYear + i);
@@ -25,6 +30,7 @@ export function TableYear({
   onUpdateCalendar,
 }: TableYearProps) {
   const prefixClass = usePrefixClass();
+  const locale = useLocale().value;
 
   const getDate = (year: number) => {
     return createDate(year, 0);
@@ -36,9 +42,9 @@ export function TableYear({
     onSelect(getDate(parseInt(year, 10)));
   };
 
-  const years = getYearPanel(new Date(calendar));
-  const firstYear = years[0][0];
-  const lastYear = last(last(years));
+  const years = getYearPanel(new Date(calendar), locale);
+  const firstYear = locale.buddhistYear ? 543 + years[0][0] : years[0][0];
+  const lastYear = locale.buddhistYear ? 543 + (last(last(years)) ?? 0) : last(last(years));
 
   return (
     <div class={`${prefixClass}-calendar ${prefixClass}-calendar-panel-year`}>
@@ -58,7 +64,7 @@ export function TableYear({
                   data-year={cell}
                   onClick={handleClick}
                 >
-                  <div>{cell}</div>
+                  <div>{locale.buddhistYear ? 543 + cell : cell}</div>
                 </td>
               ))}
             </tr>

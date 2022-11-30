@@ -38,7 +38,7 @@ export function TableMonth({
           class={`${prefixClass}-btn ${prefixClass}-btn-text ${prefixClass}-btn-current-year`}
           onClick={() => onUpdatePanel('year')}
         >
-          {calendar.getFullYear()}
+          {locale.buddhistYear ? 543 + calendar.getFullYear() : calendar.getFullYear()}
         </button>
       </TableHeader>
       <div class={`${prefixClass}-calendar-content`}>

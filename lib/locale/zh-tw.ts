@@ -6,6 +6,7 @@ const lang = {
   yearFormat: 'YYYY年',
   monthFormat: 'MMM',
   monthBeforeYear: false,
+  buddhistYear: false,
 };
 
 DatePicker.locale('zh-tw', lang);

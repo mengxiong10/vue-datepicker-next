@@ -6,6 +6,7 @@ const lang = {
   yearFormat: 'YYYY',
   monthFormat: 'MMM',
   monthBeforeYear: true,
+  buddhistYear: true,
 };
 
 DatePicker.locale('th', lang);
