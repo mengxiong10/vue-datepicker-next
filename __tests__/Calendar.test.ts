@@ -70,6 +70,22 @@ describe('CalendarPanel', () => {
     expect(td.classes()).toContain('active');
   });
 
+  it('feat: is-start class', async () => {
+    wrapper = mount(Calendar);
+    const td = wrapper.find('.mx-table-date td:nth-child(6)');
+    expect(td.classes()).not.toContain('is-start');
+    await wrapper.setProps({ value: new Date(2019, 9, 4) });
+    expect(td.classes()).toContain('is-start');
+  });
+
+  it('feat: is-end class', async () => {
+    wrapper = mount(Calendar);
+    const td = wrapper.find('.mx-table-date td:nth-child(6)');
+    expect(td.classes()).not.toContain('is-end');
+    await wrapper.setProps({ value: new Date(2019, 9, 4) });
+    expect(td.classes()).toContain('is-end');
+  });
+
   it('prop: disabledDate', () => {
     const disabledDate = (date: Date) => {
       return date < new Date(2019, 9, 1) || date > new Date(2019, 9, 20);
