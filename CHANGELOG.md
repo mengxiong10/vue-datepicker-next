@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/mengxiong10/vue-datepicker-next/compare/v1.0.2...v1.0.3) (2023-03-13)
+
+
+### Bug Fixes
+
+* display the disabled date in input field ([#37](https://github.com/mengxiong10/vue-datepicker-next/issues/37)) ([d40a8e9](https://github.com/mengxiong10/vue-datepicker-next/commit/d40a8e913412104b4bfe1dcb6ab40098cb134c26))
+
+
+
 ## [1.0.2](https://github.com/mengxiong10/vue-datepicker-next/compare/v1.0.1...v1.0.2) (2021-12-16)
 
 
