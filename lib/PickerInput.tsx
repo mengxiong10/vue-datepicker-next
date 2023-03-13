@@ -50,12 +50,19 @@ function PickerInput(originalProps: PickerInputProps, { slots }: SetupContext) {
 
   const isValidValue = (value: unknown) => {
     if (props.range) {
-      return isValidRangeDate(value) && value.every((date) => !props.disabledDate(date));
+      return isValidRangeDate(value);
     }
     if (props.multiple) {
-      return isValidDates(value) && value.every((date) => !props.disabledDate(date));
+      return isValidDates(value);
     }
-    return isValidDate(value) && !props.disabledDate(value);
+    return isValidDate(value);
+  };
+
+  const isDisabledValue = (value: Date | Date[]) => {
+    if (Array.isArray(value)) {
+      return value.some((v) => props.disabledDate(v));
+    }
+    return props.disabledDate(value);
   };
 
   const text = computed(() => {
@@ -104,7 +111,7 @@ function PickerInput(originalProps: PickerInputProps, { slots }: SetupContext) {
     } else {
       date = props.parseDate(text);
     }
-    if (isValidValue(date)) {
+    if (isValidValue(date) && !isDisabledValue(date)) {
       props.onChange(date);
     } else {
       props.onInputError?.(text);
