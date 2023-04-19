@@ -24,8 +24,14 @@ export function isValidDates(dates: unknown): dates is Date[] {
 export function getValidDate(...values: Array<number | string | Date | undefined>): Date {
   if (values[0] !== undefined && values[0] !== null) {
     const date = new Date(values[0]);
-    if (isValidDate(date)) {
-      return date;
+    const timezoneOffset = date.getTimezoneOffset() * 60000;
+    const timezoneCorrectedDate =
+      timezoneOffset > 0
+        ? new Date(date.getTime() + timezoneOffset)
+        : new Date(date.getTime() - timezoneOffset);
+
+    if (isValidDate(timezoneCorrectedDate)) {
+      return timezoneCorrectedDate;
     }
   }
   const rest = values.slice(1);
