@@ -89,12 +89,12 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
     return format(date, fmt, { locale: locale.value.formatLocale });
   };
 
-  const parseDate = (value: string, fmt?: string): Date => {
+  const parseDate = (value: string, fmt?: string, defaultDate?: Date): Date => {
     fmt = fmt || props.format;
     if (isPlainObject(props.formatter) && typeof props.formatter.parse === 'function') {
       return props.formatter.parse(value, fmt);
     }
-    const backupDate = new Date();
+    const backupDate = defaultDate || new Date();
     return parse(value, fmt, { locale: locale.value.formatLocale, backupDate });
   };
 

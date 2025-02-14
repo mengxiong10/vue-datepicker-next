@@ -24,7 +24,7 @@ export interface PickerInputBaseProps {
 export interface PickerInputProps extends PickerInputBaseProps {
   value: Date | Date[];
   formatDate: (v: Date) => string;
-  parseDate: (v: string) => Date;
+  parseDate: (v: string, fmt?: string, defaultDate?: Date) => Date;
   disabledDate: (v: Date) => boolean;
   onChange: (v: Date | Date[] | null | null[]) => void;
   onFocus: () => void;
@@ -109,7 +109,7 @@ function PickerInput(originalProps: PickerInputProps, { slots }: SetupContext) {
     } else if (props.multiple) {
       date = text.split(innerSeparator.value).map((v) => props.parseDate(v.trim()));
     } else {
-      date = props.parseDate(text);
+      date = props.parseDate(text, undefined, props.value as Date);
     }
     if (isValidValue(date) && !isDisabledValue(date)) {
       props.onChange(date);
