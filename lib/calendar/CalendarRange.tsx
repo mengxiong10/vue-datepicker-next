@@ -124,11 +124,17 @@ function CalendarRange(originalProps: CalendarRangeProps) {
     if (currentDates.length === 2 && inRange(cellDate, currentDates as DateRange)) {
       classes.push('in-range');
     }
+    if (hoveredValue.value?.getTime() === cellDate.getTime()) {
+      classes.push('hovered');
+    }
     if (
       currentDates.length === 1 &&
       hoveredValue.value &&
       inRange(cellDate, [currentDates[0], hoveredValue.value])
     ) {
+      if (hoveredValue.value.getTime() < currentDates[0].getTime()) {
+        classes.push('range-invert');
+      }
       return classes.concat('hover-in-range');
     }
     return classes;
