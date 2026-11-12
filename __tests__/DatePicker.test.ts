@@ -54,6 +54,25 @@ describe('DatePicker', () => {
     expect(getPopupVisible()).toBe(false);
   });
 
+  it('ignores clicks on a popup that is leaving after the picker is disabled', async () => {
+    const updateValue = jest.fn();
+    wrapper = mount(DatePicker, {
+      attachTo: document.body,
+      props: {
+        appendToBody: false,
+        value: new Date(2021, 10, 11),
+        'onUpdate:value': updateValue,
+      },
+      global: { stubs: { transition: false } },
+    });
+    await wrapper.get('input').trigger('click');
+    const day = wrapper.get('[title="2021-11-18"]');
+    await wrapper.setProps({ disabled: true });
+    expect(document.body.contains(day.element)).toBe(true);
+    await day.trigger('click');
+    expect(updateValue).not.toHaveBeenCalled();
+  });
+
   it('prop: open', async () => {
     const mockFn = jest.fn();
     wrapper = mount(DatePicker, {

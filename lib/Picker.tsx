@@ -137,6 +137,7 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
   });
 
   const emitValue = (date: Date | Date[] | null | null[], type?: string, close = true) => {
+    if (props.disabled) return;
     const value = Array.isArray(date) ? date.map(date2value) : date2value(date);
     props['onUpdate:value']?.(value);
     props.onChange?.(value, type);
@@ -155,6 +156,7 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
   });
 
   const handleSelect = (val: Date | Date[], type: string) => {
+    if (props.disabled) return;
     if (props.confirm) {
       currentValue.value = val;
     } else {
@@ -164,6 +166,7 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
   };
 
   const handleConfirm = () => {
+    if (props.disabled) return;
     const value = emitValue(currentValue.value);
     props.onConfirm?.(value);
   };
@@ -184,6 +187,7 @@ function Picker(originalProps: PickerProps, { slots }: SetupContext) {
             type="button"
             class={`${prefixClass}-btn ${prefixClass}-btn-text ${prefixClass}-btn-shortcut`}
             onClick={() => {
+              if (props.disabled) return;
               const date = v.onClick?.();
               if (date) {
                 emitValue(date);
